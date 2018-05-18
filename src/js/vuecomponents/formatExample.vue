@@ -13,11 +13,6 @@
                 {{format}}
             </li>
         </ul>
-        <ul>
-            <li v-for="format in invalidFormats">
-                {{format}}
-            </li>
-        </ul>
         <p>But <em>don't worry</em>, we got you covered, we offer some correct suggestion on closest invalid currency format you entered.</p>
         <br>
 
