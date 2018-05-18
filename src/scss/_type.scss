@@ -1,35 +1,39 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-*{
+
+* {
   font-family: Roboto, Arial, serif;
   text-rendering: optimizeLegibility;
 
-
 }
-.text-center{
+
+.text-center {
   text-align: center;
 }
 
-h1,h2,h3,h4,h5,h6,p,span,li{
+.text-right {
+  text-align: right;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, li {
   color: $navi-blue;
 }
 
-h2{
+h2 {
   font-size: 1.4rem;
 }
 
-h2.title{
+h2.title {
   font-size: 1rem;
 }
 
-p.author{
-  font-size: 0.8rem;
-  padding-bottom: 20px;
-}
+p {
+  line-height: 1.5rem;
+  &.author {
+    font-size: 0.8rem;
+    padding-bottom: 20px;
+  }
 
-p.subtitle{
-  margin-bottom: 20px;
-}
-
-.text-right{
-  text-align: right;
+  &.subtitle {
+    margin-bottom: 20px;
+  }
 }

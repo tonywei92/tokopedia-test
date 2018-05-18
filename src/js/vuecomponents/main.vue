@@ -6,18 +6,18 @@
                     <h1>Tokopedia</h1>
                 </div>
                 <div class="nav__button" style="height: 100%">
-                    <transition name="slide">
-                        <router-link to="about">
-                            <i class="fas fa-info-circle"></i>
-                        </router-link>
-                    </transition>
+                    <router-link to="about">
+                        <i class="fas fa-info-circle"></i>
+                    </router-link>
                 </div>
             </div>
             <div class="content scrollbar-macosx">
                 <div class="content-inner">
-                    <router-view>
+                    <transition name="fade">
+                        <router-view>
 
-                    </router-view>
+                        </router-view>
+                    </transition>
                 </div>
             </div>
 
@@ -28,13 +28,16 @@
     </div>
 </template>
 <style scoped="">
-    .enter { transform: translateX(100%) }
-    .enter-to { transform: translateX(0) }
-    .slide-enter-active { position: absolute }
+    .fade-enter-active, .fade-leave-active {
+        transition-property: opacity;
+        transition-duration: .25s;
+    }
 
-    .leave { transform: translateX(0) }
-    .leave-to { transform: translateX(-100%) }
+    .fade-enter-active {
+        transition-delay: .25s;
+    }
 
-    .slide-enter-active,
-    .slide-leave-active { transition: all 750ms ease-in-out }
+    .fade-enter, .fade-leave-active {
+        opacity: 0
+    }
 </style>
