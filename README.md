@@ -64,7 +64,7 @@ $ npm run watch
 
 ## Authors
 
-* **Tony Song** - *Initial work* - [PurpleBooth](https://github.com/tonywei92)
+* **Tony Song** - *Initial work* - [GitHub](https://github.com/tonywei92)
 
 ## Acknowledgments
 
