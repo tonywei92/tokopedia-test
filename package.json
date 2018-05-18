@@ -24,6 +24,7 @@
     "babel-preset-env": "^1.7.0",
     "cross-env": "^5.1.5",
     "css-loader": "^0.28.11",
+    "express-history-api-fallback": "^2.2.1",
     "jest": "^22.4.3",
     "lodash": "^4.17.10",
     "mini-css-extract-plugin": "^0.4.0",
