@@ -2,7 +2,7 @@
     <div>
 
         <h2 class="title text-center">Software Engineer Mobile Web Test</h2>
-
+        <p class="text-center subtitle">Denomination Tool</p>
         <form action="" @submit.prevent="process">
             <div class="form-group">
                 <label for="currency_input">Input Currency:</label>
