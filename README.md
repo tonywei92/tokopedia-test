@@ -15,7 +15,7 @@ Install NPM required packages
 $ npm install
 ```
 
-### Installing
+### Running
 
 Only two steps to run this web app
 
