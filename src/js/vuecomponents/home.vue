@@ -30,10 +30,12 @@
             return {
                 currency_input: '',
                 suggestion: '',
+                //initialize alert options
                 alert: {
                     message: '',
                     button_caption: ''
                 },
+                //show loading bar or not
                 loading: false
             }
         },
@@ -66,13 +68,14 @@
             showAlert(statusObj) {
                 this.suggestion = statusObj.suggestion;
                 this.alert.message = statusObj.message;
-                if (statusObj.code === 2) {
-                    this.alert.message += '. Some suggestion:'
+                if (statusObj.code === 2) { // if status is not match but have suggestion
+                    this.alert.message += '. Suggestion:'
                 }
-                if (statusObj.code === 0) {
+                if (statusObj.code === 0) { // if status missed match
                     this.alert.message += '. Click on [?] button to view valid formats'
                 }
                 this.alert.button_caption = statusObj.suggestion;
+                //show alert
                 this.$refs.alertBox.show();
             },
             fix() {
