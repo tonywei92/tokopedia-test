@@ -1,0 +1,27 @@
+.nav {
+  a{
+    color:white;
+  }
+  height: 30px;
+  background-color: $green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+  color: white;
+  &__button i{
+    padding-top: 4px;
+    font-size:1.4rem;
+    cursor:pointer;
+  }
+  &__logo{
+    cursor: default;
+    h1{
+      margin: 0;
+      color:white;
+      font-size: 1.4rem;
+    }
+  }
+}
+

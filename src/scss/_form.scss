@@ -1,0 +1,51 @@
+
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form-group{
+  label{
+    display: block;
+  }
+  input.form-control{
+    margin: 10px 0px 20px 0px;
+  }
+}
+label{
+  font-size: 0.8rem;
+}
+input[type=text],input[type=number]{
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #eee;
+  padding: 6px 0;
+  transition: border 0.2s ease;
+}
+
+input::placeholder{
+  font-size: 0.8rem;
+}
+
+input[type=text]:focus{
+  border-bottom: 2px solid #E73C7E;
+}
+
+.btn{
+  border: none;
+  padding: 5px 10px;
+  border-radius: 2px;
+  background-color: $green;
+  font-size: 0.9em;
+  color: white;
+  outline: none;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover{
+  opacity: 1;
+}
