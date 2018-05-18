@@ -2,6 +2,12 @@
 
 This exercise is designed to demonstrate my web development skills. A simple application that given a number of rupiahs will calculate the minimum number of rupiahs needed to make that amount. 
 
+## Screenshot
+![alt text](https://raw.githubusercontent.com/tonywei92/tokopedia-test/master/screenshot.png)
+
+
+## Demo
+https://powerful-wildwood-64727.herokuapp.com/
 
 ## Getting Started
 
