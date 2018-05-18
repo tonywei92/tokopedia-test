@@ -45,14 +45,19 @@ $ npm run test
 
 ## Deployment
 
-To run production mode:
+To run server:
 ```
-$ npm run prod
+$ npm run start
 ```
 
 To run watch (development mode):
 ```
 $ npm run watch
+```
+
+To run production mode:
+```
+$ npm run prod
 ```
 
 ## Built With
