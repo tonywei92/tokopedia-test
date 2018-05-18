@@ -22,7 +22,7 @@ Only two steps to run this web app
 Run development server
 
 ```
-$ npm run serve
+$ npm run start
 ```
 
 Open the web address printed on console, example:
