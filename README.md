@@ -17,7 +17,7 @@ $ npm install
 
 ### Installing
 
-Here is step by to run this web app
+Only two steps to run this web app
 
 Run development server
 
