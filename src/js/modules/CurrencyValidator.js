@@ -75,6 +75,7 @@ export default class {
             let result =  match.decimal.match(/[0-9]+/g);
 
             result = result.join("");
+            result = parseFloat(result);
             if(match.comma ){
                 result += match.comma.replace(',','.');
             }

@@ -42,7 +42,7 @@ export default class {
             }
         );
         //get money left
-        denominations['moneyleft'] = moneyLeft;
+        denominations['moneyleft'] = moneyLeft.toFixed(2);
         return denominations;
     }
 
