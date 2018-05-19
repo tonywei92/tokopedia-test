@@ -17,7 +17,7 @@ export default class {
         // Trim unnecessary whitespace
         text = text.trim();
 
-        if(!text || text === 0){
+        if(!text || text === 0 || text === "0"){
             return {
                 code: -1, // the text is empty
                 value: null,
