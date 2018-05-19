@@ -5,18 +5,20 @@ export default class {
     }
 
     get(money) {
-        // Validate before process anything
+        // Validate the 'money' value is number before denominate
         if (this.isNumber(money)) {
-            return this.slice(money)
+            return this.denominate(parseFloat(money));
         }
         else{
-            return false;
+            // throw exception if value of 'money' is not a number
+            throw money + " is not a number!";
         }
     }
 
-    slice(money) {
+    // function for denominate
+    denominate(money) {
         let moneyLeft = money;
-        //initialize result
+        //initialize result object
         let denominations = {
             values :{},
             unit: this.unit,

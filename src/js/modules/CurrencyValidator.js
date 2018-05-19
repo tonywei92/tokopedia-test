@@ -12,6 +12,7 @@ export default class {
         this.vRegExp = this.createRegExp();
     }
 
+    // validate money typed by user
     validate(text) {
         // Trim unnecessary whitespace
         text = text.trim();
