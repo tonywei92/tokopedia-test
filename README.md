@@ -62,7 +62,7 @@ To run watch (development mode):
 $ npm run watch
 ```
 
-To run production mode:
+To run production mode (minified js and css):
 ```
 $ npm run prod
 ```
