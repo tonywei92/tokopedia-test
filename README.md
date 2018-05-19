@@ -31,13 +31,14 @@ Run development server
 $ npm run start
 ```
 
-Open the web address printed on console, example:
+Open http://localhost:{port}, which the port is printed on console, example:
 
 ```
-http://localhost:8080/
+The server listening on port 5000!
 ```
+Then the address is http://localhost:5000
 
-Thats it and you're good to go!
+That all, you're good to go!
 
 ## Running the tests
 
