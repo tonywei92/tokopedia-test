@@ -2,11 +2,11 @@
 import XRegExp from 'xregexp';
 export default class {
     /**
-     * @param currencyFormat (string) set the currency format, default is Rp (case insensitive)
+     * @param currencyUnit (string) set the currency format, default is Rp (case insensitive)
      */
-    constructor(currencyFormat = 'rp') {
+    constructor(currencyUnit = 'Rp') {
         //assign currency unit
-        this.currencyFormat = currencyFormat;
+        this.currencyUnit = currencyUnit;
 
         // Build regular expression object
         this.vRegExp = this.createRegExp();
@@ -55,14 +55,9 @@ export default class {
                 code: 2, // less than 100% match
                 value: null,
                 message: 'Invalid format',
-                suggestion: this.suggestCorrection(text) // offer a 100% correct format
+                suggestion: this.getNumberFromText(text) // offer a 100% correct format
             }
         }
-    }
-
-    // Offer possible correct format
-    suggestCorrection(text) {
-        return 'Rp ' + this.getNumberFromText(text);
     }
 
 
@@ -76,18 +71,18 @@ export default class {
             let result =  match.decimal.match(/[0-9]+/g);
 
             result = result.join("");
-            result = parseFloat(result);
             if(match.comma ){
+                // replace any comma with dot, because international standard numeric precision is 'dot'
                 result += match.comma.replace(',','.');
             }
-            return result;
+            return parseFloat(result);
         }
 
-        return '';
+        return 0;
 
     }
 
     createRegExp() {
-        return XRegExp('(?:' + this.currencyFormat + '\\s?)?(?<decimal>\\d+(?:\\.\\d{3})*){1}(?<comma>,[0-9]{1,2})?', 'ig');
+        return XRegExp('(?:' + this.currencyUnit + '\\s?)?(?<decimal>\\d+(?:\\.\\d{3})*){1}(?<comma>,[0-9]{1,2})?', 'ig');
     }
 }

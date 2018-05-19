@@ -69,7 +69,9 @@
                 }
             },
             showAlert(statusObj) {
-                this.suggestion = statusObj.suggestion;
+                //set suggestion and format it with Currency.js
+                this.suggestion = this.$options.filters.formatCurrency(statusObj.suggestion);
+                //set message
                 this.alert.message = statusObj.message;
                 if (statusObj.code === 2) { // if status is not match but have suggestion
                     this.alert.message += '. Suggestion:'
@@ -77,7 +79,8 @@
                 if (statusObj.code === 0) { // if status missed match
                     this.alert.message += '. Click on [?] button to view valid formats'
                 }
-                this.alert.button_caption = statusObj.suggestion;
+                // set fix suggestion text
+                this.alert.button_caption = this.suggestion;
                 //show alert
                 this.$refs.alertBox.show();
             },
@@ -89,7 +92,7 @@
         },
         mounted() {
             //init Currency Validator and Currency Denominator
-            this.validator = new CurrencyValidator();
+            this.validator = new CurrencyValidator(window.CurrencyUnit);
             this.denominator = new CurrencyDenominator();
             tippy('.btn');
         }

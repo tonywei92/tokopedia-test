@@ -81,4 +81,6 @@ $ npm run prod
 ## Acknowledgments
 
 * PostCSS and Autoprefixer is used to help prefix CSS vendor
-* Using Tippy.JS for Popup
+* Tippy.JS used for Popup
+* XRegExp.js used for named regular expression 
+* Accounting.js used to format currency beautifully 

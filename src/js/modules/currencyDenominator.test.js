@@ -15,9 +15,8 @@ test('Test "8000"       should equal 1000: 3,  5000: 1, moneyleft: 0.00', () => 
             50000: 0,
             100000: 0
         },
-        unit: 'Rp',
         money: 8000,
-        moneyleft: "0.00"
+        moneyleft: 0
     });
 });
 
@@ -34,8 +33,7 @@ test('Test "123020"      should equal 1000: 3, 20000: 1, 100000: 1, moneyleft: 2
             50000: 0,
             100000: 1
         },
-        unit: 'Rp',
         money: 123020,
-        moneyleft: "20.00"
+        moneyleft: 20
     });
 });

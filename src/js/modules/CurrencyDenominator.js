@@ -1,7 +1,6 @@
 export default class {
-    constructor(availablePartitions = [100000, 50000, 20000, 10000, 5000, 1000, 500, 100, 50], unit='Rp') {
+    constructor(availablePartitions = [100000, 50000, 20000, 10000, 5000, 1000, 500, 100, 50]) {
         this.availablePartitions = availablePartitions;
-        this.unit = unit;
     }
 
     get(money) {
@@ -21,7 +20,6 @@ export default class {
         //initialize result object
         let denominations = {
             values :{},
-            unit: this.unit,
             money: money,
             moneyleft: 0
         };
@@ -44,7 +42,7 @@ export default class {
             }
         );
         //get money left
-        denominations['moneyleft'] = moneyLeft.toFixed(2);
+        denominations['moneyleft'] = moneyLeft;
         return denominations;
     }
 
