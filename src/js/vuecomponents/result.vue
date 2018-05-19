@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2 class="title text-center">Denominations result:</h2>
-        <p>Amount currency unit needed for {{ result.money | formatCurrency }} : </p>
+        <p>Amount currency unit needed for {{ result.money + '' | formatCurrency }} : </p>
         <ul>
             <li v-for="(item,index) in result.values" :key="index">
                 You need {{item}} of {{result.unit}} {{index}}
