@@ -64,7 +64,7 @@
                         break;
                     case 1:
                         let result = this.denominator.get(valid.value);
-                        this.$router.push({name: 'result', params: {result: result}});
+                        this.$router.push({name: 'result', params: {result: result, newInstance: true}});
                         break;
                 }
             },
