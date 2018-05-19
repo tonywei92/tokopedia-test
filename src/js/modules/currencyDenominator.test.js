@@ -2,7 +2,7 @@ import CurrencyDenominator from './CurrencyDenominator';
 
 const curDenominator = new CurrencyDenominator();
 
-test('Test "8000"       should equal 1000: 3,  5000: 1, moneyleft: 0', () => {
+test('Test "8000"       should equal 1000: 3,  5000: 1, moneyleft: 0.00', () => {
     expect(curDenominator.get(8000)).toEqual({
         values: {
             50: 0,
@@ -21,7 +21,7 @@ test('Test "8000"       should equal 1000: 3,  5000: 1, moneyleft: 0', () => {
     });
 });
 
-test('Test "123020"      should equal 1000: 3, 20000: 1, 100000: 1, moneyleft: 20', () => {
+test('Test "123020"      should equal 1000: 3, 20000: 1, 100000: 1, moneyleft: 20.00', () => {
     expect(curDenominator.get(123020)).toEqual({
         values: {
             50: 0,
