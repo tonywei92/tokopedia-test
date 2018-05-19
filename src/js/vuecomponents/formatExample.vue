@@ -21,6 +21,7 @@
 </template>
 
 <script>
+    //example page, only display valid and invalid format, nothing more.
     export default {
         data(){
             return {

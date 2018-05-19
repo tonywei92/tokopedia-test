@@ -7,6 +7,7 @@
 </template>
 
 <script>
+    // just about page, nothing special
     export default {
         data(){
             return{

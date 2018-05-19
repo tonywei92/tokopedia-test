@@ -1,3 +1,6 @@
+<!--
+This is master page, navs, fab "back" button and child page in here
+-->
 <template>
     <div class="container">
         <div class="row-center material-box">
@@ -20,7 +23,7 @@
                     </transition>
                 </div>
             </div>
-
+            <!-- dont show fab "back" button if we are on root page '/'  -->
             <router-link v-show="$route.path !== '/'" to="/" class="fab material-box">
                 <i class="fas fa-arrow-left"></i>
             </router-link>

@@ -11,10 +11,11 @@
     </div>
 </template>
 <script>
+    // used lodash to get object size
     import _ from 'lodash';
-
     export default {
         props: {
+            // initialize Result object, needed to avoid error
             result: {
                 default:
                     function () {
@@ -29,6 +30,8 @@
         },
         computed: {},
         mounted() {
+            // if no result passed, eg. if user open /result without input first,
+            // then redirect back to home
             if (!_.size(this.result.values)) {
                 this.$router.push('/');
             }
